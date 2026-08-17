@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="DroneDash.Console/DroneDash.Console.csproj" />
+  <Project Path="DroneDash.Core/DroneDash.Core.csproj" />
+  <Project Path="DroneDash.Tests/DroneDash.Tests.csproj" />
+</Solution>

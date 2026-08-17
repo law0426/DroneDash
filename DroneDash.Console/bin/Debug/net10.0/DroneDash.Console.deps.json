@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "DroneDash.Console/1.0.0": {
+        "dependencies": {
+          "DroneDash.Core": "1.0.0"
+        },
+        "runtime": {
+          "DroneDash.Console.dll": {}
+        }
+      },
+      "DroneDash.Core/1.0.0": {
+        "runtime": {
+          "DroneDash.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DroneDash.Console/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DroneDash.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

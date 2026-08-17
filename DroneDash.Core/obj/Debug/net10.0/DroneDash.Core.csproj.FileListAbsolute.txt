@@ -1,0 +1,11 @@
+C:\Users\Deltaker\Documents\kodehode\ProjectFolders\backend2\DroneDash\DroneDash.Core\obj\Debug\net10.0\DroneDash.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Deltaker\Documents\kodehode\ProjectFolders\backend2\DroneDash\DroneDash.Core\obj\Debug\net10.0\DroneDash.Core.AssemblyInfoInputs.cache
+C:\Users\Deltaker\Documents\kodehode\ProjectFolders\backend2\DroneDash\DroneDash.Core\obj\Debug\net10.0\DroneDash.Core.AssemblyInfo.cs
+C:\Users\Deltaker\Documents\kodehode\ProjectFolders\backend2\DroneDash\DroneDash.Core\obj\Debug\net10.0\DroneDash.Core.csproj.CoreCompileInputs.cache
+C:\Users\Deltaker\Documents\kodehode\ProjectFolders\backend2\DroneDash\DroneDash.Core\bin\Debug\net10.0\DroneDash.Core.deps.json
+C:\Users\Deltaker\Documents\kodehode\ProjectFolders\backend2\DroneDash\DroneDash.Core\bin\Debug\net10.0\DroneDash.Core.dll
+C:\Users\Deltaker\Documents\kodehode\ProjectFolders\backend2\DroneDash\DroneDash.Core\bin\Debug\net10.0\DroneDash.Core.pdb
+C:\Users\Deltaker\Documents\kodehode\ProjectFolders\backend2\DroneDash\DroneDash.Core\obj\Debug\net10.0\DroneDash.Core.dll
+C:\Users\Deltaker\Documents\kodehode\ProjectFolders\backend2\DroneDash\DroneDash.Core\obj\Debug\net10.0\refint\DroneDash.Core.dll
+C:\Users\Deltaker\Documents\kodehode\ProjectFolders\backend2\DroneDash\DroneDash.Core\obj\Debug\net10.0\DroneDash.Core.pdb
+C:\Users\Deltaker\Documents\kodehode\ProjectFolders\backend2\DroneDash\DroneDash.Core\obj\Debug\net10.0\ref\DroneDash.Core.dll
