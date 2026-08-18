@@ -51,6 +51,29 @@ public class Dash{
         Console.WriteLine($"Thread {counter.Name}: Finished");
     }
 
+    public void ThreadRace()
+    {
+        //We take the dronemodels, and race them against each other.
+        //Each model uses its own thread.
+        //All that means is that they run in parallel.
+        //They count every time they pass a check point.
+        //Log the starts
+        //Use join
+
+        //MAKE A VERSION WITHOUT JOIN?
+
+        //5) Noter klumpete/ikke-deterministisk utskrift og hva det sier om delte ressurser (Console).
+
+    }
+
+    public void AsyncOrchestration()
+    {
+        //Achieve the same results using tasks instead.
+        //Meaning use async/await
+        //Await task.delay. for every step
+        //
+    }
+
 }
 
 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Deltaker\\Documents\\kodehode\\ProjectFolders\\backend2\\DroneDash\\dronedash.console\\DroneDash.Console.csproj": {}
+    "C:\\Users\\Deltaker\\Documents\\kodehode\\ProjectFolders\\backend2\\DroneDash\\DroneDash.Console\\DroneDash.Console.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Deltaker\\Documents\\kodehode\\ProjectFolders\\backend2\\DroneDash\\dronedash.console\\DroneDash.Console.csproj": {
+    "C:\\Users\\Deltaker\\Documents\\kodehode\\ProjectFolders\\backend2\\DroneDash\\DroneDash.Console\\DroneDash.Console.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Deltaker\\Documents\\kodehode\\ProjectFolders\\backend2\\DroneDash\\dronedash.console\\DroneDash.Console.csproj",
+        "projectUniqueName": "C:\\Users\\Deltaker\\Documents\\kodehode\\ProjectFolders\\backend2\\DroneDash\\DroneDash.Console\\DroneDash.Console.csproj",
         "projectName": "DroneDash.Console",
-        "projectPath": "C:\\Users\\Deltaker\\Documents\\kodehode\\ProjectFolders\\backend2\\DroneDash\\dronedash.console\\DroneDash.Console.csproj",
+        "projectPath": "C:\\Users\\Deltaker\\Documents\\kodehode\\ProjectFolders\\backend2\\DroneDash\\DroneDash.Console\\DroneDash.Console.csproj",
         "packagesPath": "C:\\Users\\Deltaker\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Deltaker\\Documents\\kodehode\\ProjectFolders\\backend2\\DroneDash\\dronedash.console\\obj\\",
+        "outputPath": "C:\\Users\\Deltaker\\Documents\\kodehode\\ProjectFolders\\backend2\\DroneDash\\DroneDash.Console\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Deltaker\\AppData\\Roaming\\NuGet\\NuGet.Config"
