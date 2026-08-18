@@ -13,4 +13,7 @@ If the prior - does that mean the main thread will continue once the designated 
 
 I dunno.
 
+Well, apparently I won't be working with threads anymore, but it's good to know how it accepts certain functions
+
+
 

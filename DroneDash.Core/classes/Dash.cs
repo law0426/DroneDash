@@ -53,17 +53,51 @@ public class Dash{
 
     public void ThreadRace()
     {
-        //We take the dronemodels, and race them against each other.
-        //Each model uses its own thread.
-        //All that means is that they run in parallel.
-        //They count every time they pass a check point.
-        //Log the starts
-        //Use join
+        //I could set up a method to set up multiple drones and threads with random values. 
+        //But that's not the point of the test.
+
+        //Entrants take the field.
+        var drone1 = new DroneModel("SeaBiscuit", 5, 333);
+        
+        DroneModel drone2 = new ("Equinox", 3, 500);
+        //DroneModel[] droneModels = [drone1,drone2];
+        //The referees get ready:
+        //so threads don't like non-object arguments?
+        //Since I'm not using object? as the argument type.
+        //I'm using lambda expression instead:
+        Thread track1 = new (() => SendDrone(drone1));
+        Thread track2 = new (() => SendDrone(drone2));
+        //And GO!
+        track1.Start();
+        track2.Start();
+
+        track1.Join();
+        track2.Join();
+
+        Console.WriteLine("Both drones have finished their race!");
+        //Readline?
 
         //MAKE A VERSION WITHOUT JOIN?
-
         //5) Noter klumpete/ikke-deterministisk utskrift og hva det sier om delte ressurser (Console).
+    }
 
+    // -  its weird to take a flexible object only to immediatle assume it's a specific one.
+    // I knew it! It's because the thread variable won't accept the function otherwise!
+
+    private  void SendDrone(DroneModel drone)
+    {
+        Console.WriteLine($"And {drone.Name} is off to the races!");
+        //Ok, so this function just gets sent to a thread, but otherwise just behaves like a funksjon would?
+        //It does contain thread behavior, though.
+        //I could set up an actual stopwatch for fun?
+        int timePassed = 0;
+        for (int i = 0; i < drone.MaxCheckpoints; i++)
+        {
+            Thread.Sleep(drone.DelayMs);
+            timePassed += drone.DelayMs;
+            Console.WriteLine($"{drone.Name} has just passed a checkpoint after {timePassed} ms!");
+        }
+        Console.WriteLine($"{drone.Name}Has finished the race after {timePassed}!");
     }
 
     public void AsyncOrchestration()
@@ -82,9 +116,9 @@ public class Dash{
 
 
 
-public class DroneModel(string name, int maxCount, int delay)
+public class DroneModel(string name, int maxCheckpoints, int delay)
 {
     public string Name { get; set; } = name;
-    public int MaxCheckpoints { get; set; } = maxCount;
+    public int MaxCheckpoints { get; set; } = maxCheckpoints;
     public int DelayMs { get; set; } = delay;
 }
