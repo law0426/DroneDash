@@ -16,3 +16,4 @@ C:\Users\Deltaker\Documents\kodehode\ProjectFolders\backend2\DroneDash\DroneDash
 C:\Users\Deltaker\Documents\kodehode\ProjectFolders\backend2\DroneDash\DroneDash.Console\obj\Debug\net10.0\DroneDash.Console.pdb
 C:\Users\Deltaker\Documents\kodehode\ProjectFolders\backend2\DroneDash\DroneDash.Console\obj\Debug\net10.0\DroneDash.Console.genruntimeconfig.cache
 C:\Users\Deltaker\Documents\kodehode\ProjectFolders\backend2\DroneDash\DroneDash.Console\obj\Debug\net10.0\ref\DroneDash.Console.dll
+C:\Users\Deltaker\Documents\kodehode\ProjectFolders\backend2\DroneDash\DroneDash.Console\obj\Debug\net10.0\DroneDash.Console.sourcelink.json

@@ -51,13 +51,13 @@ public class Dash{
         Console.WriteLine($"Thread {counter.Name}: Finished");
     }
 
-    public void ThreadRace()
+    public static void ThreadRace()
     {
         //I could set up a method to set up multiple drones and threads with random values. 
         //But that's not the point of the test.
 
         //Entrants take the field.
-        var drone1 = new DroneModel("SeaBiscuit", 5, 333);
+        var drone1 = new DroneModel("SeaBiscuit", 5, 300);
         
         DroneModel drone2 = new ("Equinox", 3, 500);
         //DroneModel[] droneModels = [drone1,drone2];
@@ -68,6 +68,7 @@ public class Dash{
         Thread track1 = new (() => SendDrone(drone1));
         Thread track2 = new (() => SendDrone(drone2));
         //And GO!
+        Console.WriteLine("The drones are ready at the starting line!");
         track1.Start();
         track2.Start();
 
@@ -84,7 +85,7 @@ public class Dash{
     // -  its weird to take a flexible object only to immediatle assume it's a specific one.
     // I knew it! It's because the thread variable won't accept the function otherwise!
 
-    private  void SendDrone(DroneModel drone)
+    private static void SendDrone(DroneModel drone)
     {
         Console.WriteLine($"And {drone.Name} is off to the races!");
         //Ok, so this function just gets sent to a thread, but otherwise just behaves like a funksjon would?
@@ -95,17 +96,41 @@ public class Dash{
         {
             Thread.Sleep(drone.DelayMs);
             timePassed += drone.DelayMs;
-            Console.WriteLine($"{drone.Name} has just passed a checkpoint after {timePassed} ms!");
+            Console.WriteLine($"{drone.Name} has just passed checkpoint {i+1} after {timePassed} ms!");
         }
         Console.WriteLine($"{drone.Name}Has finished the race after {timePassed}!");
     }
 
-    public void AsyncOrchestration()
+    public async static Task AsyncOrchestration()
     {
         //Achieve the same results using tasks instead.
         //Meaning use async/await
         //Await task.delay. for every step
-        //
+        //Do I even know how to set up a task? Nope. Back to the video.
+
+        //I would like to just hold the function, but it's so fidgety.
+        DroneModel drone1 = new("SeaBiscuit", 5, 300);
+        Task task1 = Task.Run(()=> AsyncSendDrone(drone1));
+        DroneModel drone2 = new ("Equinox", 3, 500);
+        Task task2 = Task.Run(()=> AsyncSendDrone(drone2));
+
+        await task1;
+        await task2;
+        Console.WriteLine("Both drones have finished their ASYNC race!");
+
+    }
+
+    private async static Task AsyncSendDrone(DroneModel drone)
+    {
+        Console.WriteLine($"And {drone.Name} is off to the races!");
+        int timePassed = 0;
+        for (int i = 0; i < drone.MaxCheckpoints; i++)
+        {
+            await Task.Delay(drone.DelayMs);
+            timePassed += drone.DelayMs;
+            Console.WriteLine($"{drone.Name} has just passed checkpoint {i+1} after {timePassed} ms!");
+        }
+        Console.WriteLine($"{drone.Name}Has finished the race after {timePassed}!");
     }
 
 }
