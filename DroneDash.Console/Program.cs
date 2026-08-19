@@ -1,4 +1,5 @@
-﻿using DroneDash.Core.Classes.Dash;
+﻿using System.ComponentModel.Design;
+using DroneDash.Core.Classes.Menu;
 
 Console.WriteLine("Hello, World!");
 
@@ -8,11 +9,4 @@ Console.WriteLine("Hello, World!");
 
 //Dash.CountTwoThreads();
 // Dash.ThreadRace();
-try
-{
-    await Dash.AsyncOrchestration();
-}
-catch
-{
-    Console.WriteLine("WHOOPS?");
-}
+Menu.Start();

@@ -117,7 +117,7 @@ public class Dash{
         }
         catch(ArgumentOutOfRangeException ex)
         {
-            Console.WriteLine(ex);
+            Console.WriteLine(ex);//Shouldn't this still write?
         }
         
         DroneModel drone2 = new ("Equinox", 3, 500);
