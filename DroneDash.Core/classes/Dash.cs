@@ -109,24 +109,48 @@ public class Dash{
         //Do I even know how to set up a task? Nope. Back to the video.
 
         //I would like to just hold the function, but it's so fidgety.
-        DroneModel drone1 = new("SeaBiscuit", 5, 300);
-        Task task1 = Task.Run(()=> AsyncSendDrone(drone1));
+        DroneModel drone1 = new("SeaBiscuit", 5, -333);
+        Task? task1 = null;
+        try
+        {
+            task1 = Task.Run(()=> AsyncSendDrone(drone1));
+        }
+        catch(ArgumentOutOfRangeException ex)
+        {
+            Console.WriteLine(ex);
+        }
+        
         DroneModel drone2 = new ("Equinox", 3, 500);
         Task task2 = Task.Run(()=> AsyncSendDrone(drone2));
 
-        await task1;
-        await task2;
+        // await task1;
+        // await task2;
+        await Task.WhenAll(task1, task2);
+
         Console.WriteLine("Both drones have finished their ASYNC race!");
 
     }
 
     private async static Task AsyncSendDrone(DroneModel drone)
     {
+        if(drone.DelayMs <0 ) throw new ArgumentOutOfRangeException($"DelayMS cannot be negative: {drone.DelayMs}");
+
         Console.WriteLine($"And {drone.Name} is off to the races!");
         int timePassed = 0;
         for (int i = 0; i < drone.MaxCheckpoints; i++)
         {
+            // Kept for posterity:
+            // try
+            // {
+            //     await Task.Delay(drone.DelayMs);
+            // }
+            // catch (ArgumentOutOfRangeException)
+            // {
+            //     Console.WriteLine($"DelayMS set to inappropriate value: {drone.DelayMs}");
+            // }
+            
             await Task.Delay(drone.DelayMs);
+
             timePassed += drone.DelayMs;
             Console.WriteLine($"{drone.Name} has just passed checkpoint {i+1} after {timePassed} ms!");
         }

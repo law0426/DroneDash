@@ -8,4 +8,11 @@ Console.WriteLine("Hello, World!");
 
 //Dash.CountTwoThreads();
 // Dash.ThreadRace();
-await Dash.AsyncOrchestration();
+try
+{
+    await Dash.AsyncOrchestration();
+}
+catch
+{
+    Console.WriteLine("WHOOPS?");
+}
