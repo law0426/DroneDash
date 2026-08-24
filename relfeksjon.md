@@ -47,5 +47,8 @@ Although if it's supposed to accurately race the drones, that could get funky du
 things not actually happening simultaneously but in rapid sequence.
 
 
+MORE ON ERRORS:
+It's weird that the program doesn't crash when asyncorchestration is run directly, but does crash via menu.
+
 
 

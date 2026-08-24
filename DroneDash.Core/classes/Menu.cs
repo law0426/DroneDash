@@ -51,10 +51,6 @@ public class Menu()
                     Console.Clear();
                     break;
                 case "4":
-                    running = false;
-                    Console.WriteLine("Now shutting down. Press enter to exit.");
-                    Console.ReadLine();
-                    break;
                 case "exit":
                     running = false;
                     Console.WriteLine("Now shutting down. Press enter to exit.");

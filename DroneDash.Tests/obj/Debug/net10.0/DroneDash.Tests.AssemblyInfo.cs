@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DroneDash.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+62eb8c9c93d516064c226f1bd71cfb02e868d239")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b1ed940beb7917ee1ac9c9ce0bbc3314ef809e11")]
 [assembly: System.Reflection.AssemblyProductAttribute("DroneDash.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DroneDash.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
