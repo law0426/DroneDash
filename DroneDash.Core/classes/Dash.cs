@@ -109,7 +109,7 @@ public class Dash{
         //Do I even know how to set up a task? Nope. Back to the video.
 
         //I would like to just hold the function, but it's so fidgety.
-        DroneModel drone1 = new("SeaBiscuit", 5, -333);
+        DroneModel drone1 = new("SeaBiscuit", 5, 333);
         Task? task1 = null;
         try
         {

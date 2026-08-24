@@ -3,8 +3,10 @@ namespace DroneDash.Core.Classes.WebServer;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using DroneDash.Core.Classes.Dash;
 
 public class WebServer{
+    DroneModel[] drones;
     //En webserver er ikke magi. Den er en socket som lytter på en port,
     //leser tekst fra en TCP-forbindelse, og skriver tekst tilbake.
     //Alt ASP.NET Core gjør, er dette pluss veldig mange lag med bekvemmelighet.
@@ -18,11 +20,11 @@ public class WebServer{
     //TcpListener er "resepsjonisten". Den tar imot innkommende forbindelser på en port.
     //IPAddress.Any betyr "lytt på alle nettverkskortene på maskinen", ikke bare localhost.
     //Vil du kun slippe til trafikk fra din egen maskin, bruker du IPAddress.Loopback.
-    public static async Task Run()
+    public static async Task Run(int gate)
     {
-        var listener = new TcpListener(IPAddress.Any, 8080);
+        var listener = new TcpListener(IPAddress.Any, gate);
         listener.Start();
-        Console.WriteLine("Listening on localhost:8080");
+        Console.WriteLine($"Listening on localhost:{gate}");
 
         while (true)
         {
@@ -63,16 +65,23 @@ public class WebServer{
                 {
                     response = BuildResponse("200 OK", "Goodbye!");
                 }
-                else
+                else if (method == "POST" && rawUrl == "/goodbye") //Contains register?
                 {
-                    response = BuildResponse("404 Not Found", "Endpoint not found");
+                    response = BuildResponse("200 OK", "Goodbye!");
                 }
-
                 ///route?drone=Navn => (antall checkpoints, basert på dronenavn)
                 //weather. => clear, wind, storm, der storm øker DelayMs
                 ///register?drone=name&checkpoints&delay
                 //what's the syntax for the above? post? 
                 //Race?
+
+
+                else
+                {
+                    response = BuildResponse("404 Not Found", "Endpoint not found");
+                }
+
+                
 
 
 

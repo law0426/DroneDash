@@ -13,10 +13,17 @@ Console.WriteLine("Hello, World!");
 
 // Console.WriteLine(response);
 
-Task main = WebServer.Run();
+int gateWay = 8080;
+string mainURL = $"http://localhost:{gateWay}/";
+HttpClient client = new HttpClient(); //establish client.
+
+Task main = WebServer.Run(gateWay);
 
 await main;
 
+//Now takes main URL as argument and uses it to communicate. Also takes webserver? can we double await?
+//FML.
+Menu.Start(client, mainURL);
 
 
 //Dash.CountTwoThreads();
